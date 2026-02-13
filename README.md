@@ -1,204 +1,411 @@
-PracticasMoviles - ITIID 4 || Programación en Dart
+# 📱 PracticasMoviles - Dart Fundamentals
 
-Este repositorio contiene una serie de ejercicios y programas desarrollados en Dart, diseñados como una progresión pedagógica para dominar los fundamentos del lenguaje, desde la sintaxis básica hasta la implementación de algoritmos complejos y programación modular.
+<div align="center">
 
-👤 Información del Autor
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/status-active-success?style=for-the-badge)
 
-Autor: Hernandez Cortes Haziel Atlay
+**ITIID 4 || Desarrollo Móvil**  
+*Hernandez Cortes Haziel Atlay*
 
-Curso: ITIID 4 || Moviles
+[Acerca del Proyecto](#-acerca-del-proyecto) •
+[Estructura](#-estructura-del-curso) •
+[Instalación](#-instalación) •
+[Uso](#-uso) •
+[Contenido](#-contenido-detallado)
 
-Proyecto: Prácticas de Programación Móvil (Fundamentos de Dart)
+</div>
 
-Nivel: Básico a Intermedio
+---
 
-🚀 Progresión Pedagógica
+## 📖 Acerca del Proyecto
 
-El curso está estructurado para guiar al estudiante a través de las capacidades del lenguaje de forma incremental:
+Colección completa de **21 programas en Dart** que cubren desde conceptos fundamentales hasta algoritmos intermedios. Este repositorio sirve como material didáctico para aprender programación estructurada e imperativa en Dart, con enfoque en desarrollo móvil.
 
-Fase
+### 🎯 Objetivos de Aprendizaje
 
-Categoría
+- ✅ Dominar sintaxis y tipos de datos en Dart
+- ✅ Implementar estructuras de control (if-else, switch, loops)
+- ✅ Crear funciones modulares y reutilizables
+- ✅ Desarrollar algoritmos matemáticos clásicos
+- ✅ Construir aplicaciones interactivas de consola
 
-Archivos
+### 📊 Estadísticas
 
-Descripción
+- **Total de programas:** 21
+- **Líneas de código:** ~800+
+- **Conceptos cubiertos:** 30+
+- **Nivel:** Básico a Intermedio
 
-1
+---
 
-Introducción
+## 🚀 Instalación
 
-01 - 04
+### Prerrequisitos
 
-Sintaxis inicial, tipos de datos y constantes.
+```bash
+# Verificar instalación de Dart
+dart --version
+```
 
-2
+Si no tienes Dart instalado, descárgalo desde [dart.dev](https://dart.dev/get-dart)
 
-Operadores
+### Clonar el Repositorio
 
-05 - 06
+```bash
+git clone https://github.com/tu-usuario/PracticasMoviles.git
+cd PracticasMoviles
+```
 
-Manipulación aritmética y lógica de datos.
+---
 
-3
+## 💻 Uso
 
-Interacción
+### Ejecutar un Programa
 
-07 - 10
+```bash
+# Sintaxis general
+dart nombre_archivo.dart
 
-Entrada/salida (I/O) y manejo de strings.
+# Ejemplos
+dart 01_holaMundo.dart
+dart 13_menus.dart
+dart 19_7_primo.dart
+```
 
-4
+### Ejemplos de Ejecución
 
-Decisiones
+```bash
+# Calculadora geométrica
+$ dart 13_menus.dart
+=== Menú Principal ===
+Calcular Área (1)
+Calcular Volumen (2)
+Salir (3)
+Seleccione una opción: 1
 
-11 - 13
+# Verificador de números primos
+$ dart 19_7_primo.dart
+Ingrese un número:
+17
+17 es un número primo.
+```
 
-Estructuras condicionales y menús interactivos.
+---
 
-5
+## 📚 Progresión Pedagógica
 
-Procesamiento
+El curso está estructurado en 7 módulos progresivos:
 
-14 - 16
+```
+1️⃣ Introducción (01-04)
+   └─ Sintaxis básica y tipos de datos
 
-Aplicaciones prácticas y acumuladores.
+2️⃣ Operadores (05-06)
+   └─ Manipulación de datos
 
-6
+3️⃣ Interacción (07-10)
+   └─ Entrada/salida de usuario
 
-Iteración
+4️⃣ Decisiones (11-13)
+   └─ Estructuras condicionales y menús
 
-17 - 18
+5️⃣ Procesamiento (14-16)
+   └─ Aplicaciones prácticas con datos
 
-Control de bucles, etiquetas y modularización.
+6️⃣ Iteración (17-18)
+   └─ Control de bucles y modularización
 
-7
+7️⃣ Algoritmos (19-20)
+   └─ Implementación de algoritmos clásicos
+```
 
-Algoritmos
+---
 
-19 - 20
+## 📑 Índice de Programas
 
-Implementación de algoritmos clásicos de computación.
+### 🎓 Fundamentos Básicos
 
-📂 Índice de Archivos
+| Archivo | Descripción | Conceptos Clave |
+|---------|-------------|-----------------|
+| `01_holaMundo.dart` | Hola Mundo | `main()`, `print()` |
+| `02_dataType.dart` | Tipos de datos | int, double, String, List, Set, Map |
+| `03_finalConst.dart` | Variables inmutables | final, const, inmutabilidad |
+| `04_comments.dart` | Comentarios | //, /* */, documentación |
 
-🎓 Fundamentos Básicos
+### ➕ Operadores
 
-01_holaMundo.dart: Primer contacto con la función main().
+| Archivo | Descripción | Conceptos Clave |
+|---------|-------------|-----------------|
+| `05_mathOperators.dart` | Operadores matemáticos | +, -, *, /, %, ~/, ++, -- |
+| `06_operators.dart` | Operadores condicionales | ??=, ternario (?:) |
 
-02_dataType.dart: Exploración de tipos (int, double, List, Set, Map).
+### 🖥️ Entrada/Salida
 
-03_finalConst.dart: Gestión de inmutabilidad en tiempo de ejecución y compilación.
+| Archivo | Descripción | Conceptos Clave |
+|---------|-------------|-----------------|
+| `07_read.dart` | Lectura básica | stdin, stdout |
+| `08_helloName.dart` | Saludo personalizado | readLineSync(), interpolación |
+| `09_sum.dart` | Suma de dos números | int.parse(), conversión de tipos |
+| `10_concat.dart` | Concatenación de strings | String manipulation |
 
-04_comments.dart: Estándares de documentación.
+### 🔀 Estructuras Condicionales
 
-➕ Operadores y Lógica
+| Archivo | Descripción | Conceptos Clave |
+|---------|-------------|-----------------|
+| `11_ifBasic.dart` | Comparación simple | if-else-if |
+| `12_Nested.dart` | Ordenamiento con condicionales | Bubble Sort, swap |
+| `13_menus.dart` | Calculadora geométrica | switch-case, funciones, dart:math |
 
-05_mathOperators.dart: Operaciones aritméticas y asignación compuesta.
+### 📊 Aplicaciones con Datos
 
-06_operators.dart: Operadores null-aware y ternarios.
+| Archivo | Descripción | Conceptos Clave |
+|---------|-------------|-----------------|
+| `14.dart` | Conversor de calificaciones | Map, validación, while |
+| `15_sumadigitos.dart` | Sumador de dígitos | Funciones, algoritmo matemático |
+| `16.dart` | Acumulador de números | while, acumuladores |
 
-🖥️ Entrada/Salida (I/O)
+### 🔁 Control de Flujo Avanzado
 
-07_read.dart: Lectura síncrona desde consola.
+| Archivo | Descripción | Conceptos Clave |
+|---------|-------------|-----------------|
+| `17_labes.dart` | Etiquetas en bucles | Labels, break con etiqueta |
+| `18a_funcions.dart` | Tablas de multiplicar (imperativo) | for loops |
+| `18b_funcions.dart` | Tablas de multiplicar (modular) | Funciones, refactorización |
 
-08_helloName.dart: Interacción personalizada.
+### 🧮 Algoritmos Matemáticos
 
-09_sum.dart: Conversión de tipos de datos (String a int).
+| Archivo | Descripción | Conceptos Clave |
+|---------|-------------|-----------------|
+| `19_7_primo.dart` | Verificador de primos | Algoritmo de primalidad |
+| `20a_factorial.dart` | Factorial (imperativo) | Bucles descendentes |
+| `20b_factorial.dart` | Factorial (modular) | Recursión iterativa |
 
-10_concat.dart: Formateo complejo de cadenas.
+---
 
-🔀 Control de Flujo y Menús
-
-11_ifBasic.dart: Comparativa lógica simple.
-
-12_Nested.dart: Algoritmo de intercambio y ordenamiento descendente.
-
-13_menus.dart: Calculadora geométrica modular con menús jerárquicos.
-
-📊 Aplicaciones y Algoritmos
-
-14.dart: Conversor de calificaciones (Americano a Mexicano).
-
-15_sumadigitos.dart: Algoritmo de descomposición numérica.
-
-16.dart: Acumulador de datos dinámico.
-
-17_labes.dart: Control avanzado de bucles con etiquetas.
-
-18a/b_funcions.dart: Tablas de multiplicar (Enfoque imperativo vs. modular).
-
-19_7_primo.dart: Verificador de números primos optimizado.
-
-20a/b_factorial.dart: Cálculo de factorial (Enfoque imperativo vs. modular).
-
-🔍 Análisis Detallado
+## 🔍 Contenido Detallado
 
 <details>
-<summary><b>Ver detalles de los algoritmos clave</b></summary>
+<summary><b>01_holaMundo.dart</b> - Programa Básico Introductorio</summary>
 
-📐 Calculadora Geométrica (13_menus.dart)
+### Descripción
+Implementa el clásico "Hola Mundo" que sirve como primer contacto con el lenguaje Dart.
 
-Implementa un sistema de menús para calcular:
+### Conceptos
+- Función principal `main()`
+- Salida estándar con `print()`
 
-Áreas: Círculo, Triángulo, Rectángulo.
-
-Volúmenes: Esfera, Pirámide, Cubo.
-Uso intensivo de dart:math y switch-case.
-
-🔢 Suma de Dígitos (15_sumadigitos.dart)
-
-Utiliza operadores de módulo (%) y división entera (~/) para extraer componentes numéricos y procesarlos de forma acumulativa.
-
-📋 Ordenamiento (12_Nested.dart)
-
-Implementación de una lógica de ordenamiento por burbuja para 4 elementos, utilizando variables auxiliares de intercambio (swap).
-
-🧪 Verificación de Primos (19_7_primo.dart)
-
-Algoritmo optimizado que reduce el espacio de búsqueda hasta n/2 y utiliza etiquetas de control para mejorar la eficiencia.
-
+### Código de Ejemplo
+```dart
+main() {
+  print('Hola, Mundo!');
+}
+```
 </details>
 
-🛠️ Conceptos Técnicos Cubiertos
+<details>
+<summary><b>02_dataType.dart</b> - Tipos de Datos</summary>
 
-Tipado: Estático, Dinámico, Null-Safety.
+### Descripción
+Demostración exhaustiva de todos los tipos de datos fundamentales en Dart.
 
-Estructuras: Listas, Sets, Maps.
+### Conceptos
+- **Tipos numéricos:** `int`, `double`
+- **Variables especiales:** Nullable (`int?`), Late initialization (`late`)
+- **Strings:** Declaración, interpolación, multilínea
+- **Booleanos:** `true/false`
+- **Colecciones:** List, Set, Map
 
-Control: Loops (for, while), Condicionales (if, switch).
+### Ejemplo
+```dart
+int edad = 25;
+String nombre = 'Juan';
+List<String> frutas = ['manzana', 'pera'];
+Map<String, int> edades = {'Ana': 30, 'Luis': 25};
+```
+</details>
 
-Modularidad: Funciones con retorno, paso de parámetros y separación de responsabilidades.
+<details>
+<summary><b>13_menus.dart</b> - Calculadora Geométrica Completa</summary>
 
-Matemáticas: Uso de la librería dart:math.
+### Descripción
+Aplicación interactiva con menú jerárquico que calcula áreas y volúmenes de figuras geométricas.
 
-🔧 Requisitos y Ejecución
+### Características
+- ✅ Menú principal con navegación
+- ✅ Cálculo de áreas: círculo, triángulo, rectángulo
+- ✅ Cálculo de volúmenes: esfera, pirámide, cubo
+- ✅ Uso de librerías `dart:io` y `dart:math`
+- ✅ Funciones modulares
 
-Para ejecutar estos archivos, necesitas tener instalado el SDK de Dart.
+### Fórmulas Implementadas
+- **Círculo:** A = π × r²
+- **Triángulo:** A = (base × altura) / 2
+- **Esfera:** V = (4/3) × π × r³
+- **Cubo:** V = lado³
 
-Clona el repositorio:
+### Arquitectura
+```
+Main Menu
+├── Calcular Área
+│   ├── Círculo
+│   ├── Triángulo
+│   └── Rectángulo
+├── Calcular Volumen
+│   ├── Esfera
+│   ├── Pirámide
+│   └── Cubo
+└── Salir
+```
+</details>
 
-git clone [https://github.com/tu-usuario/PracticasMoviles.git](https://github.com/tu-usuario/PracticasMoviles.git)
+<details>
+<summary><b>19_7_primo.dart</b> - Verificador de Números Primos</summary>
 
+### Descripción
+Implementa algoritmo optimizado para determinar si un número es primo.
 
-Entra al directorio:
+### Algoritmo
+```
+1. Si n ≤ 1 → No es primo
+2. Probar divisores desde 2 hasta n/2
+3. Si algún divisor es exacto → No es primo
+4. Si llega al final sin divisores → Es primo
+```
 
-cd PracticasMoviles
+### Optimizaciones
+- ✅ Solo verifica hasta n/2
+- ✅ Usa etiquetas para salida temprana
+- ✅ División entera para eficiencia
 
+### Complejidad
+- **Tiempo:** O(n/2)
+- **Espacio:** O(1)
+</details>
 
-Ejecuta cualquier archivo:
+---
 
-dart nombre_del_archivo.dart
+## 🛠️ Conceptos Técnicos Cubiertos
 
+### Fundamentos
+- ✅ Tipos de datos primitivos y compuestos
+- ✅ Variables mutables e inmutables (`var`, `final`, `const`)
+- ✅ Operadores (aritméticos, lógicos, condicionales)
+- ✅ Entrada/salida en consola
 
-✅ Buenas Prácticas Aplicadas
+### Estructuras de Control
+- ✅ Condicionales: `if-else`, `if-else-if`, operador ternario, `switch-case`
+- ✅ Bucles: `for`, `while`, bucles infinitos
+- ✅ Labels y control de flujo avanzado
+- ✅ Menús interactivos jerárquicos
 
-✅ Comentarios descriptivos y legibles.
+### Estructuras de Datos
+- ✅ Listas (Arrays)
+- ✅ Sets (conjuntos)
+- ✅ Maps (diccionarios)
 
-✅ Modularización mediante funciones para evitar código espagueti.
+### Programación Modular
+- ✅ Funciones con y sin retorno
+- ✅ Paso de parámetros
+- ✅ Refactorización de código
+- ✅ Aplicaciones multinivel
 
-✅ Validación básica de entrada de usuario.
+### Algoritmos Implementados
+- 🔢 Comparación de números
+- 📊 Ordenamiento (Bubble Sort)
+- ➕ Suma de dígitos
+- 🔍 Verificación de números primos
+- 🧮 Cálculo de factorial
+- 📐 Geometría (áreas y volúmenes)
+- 🔄 Conversión de sistemas de calificación
+- ✖️ Generación de tablas de multiplicar
 
-✅ Manejo de tipos inmutables para optimización de memoria.
+---
 
-Proyecto académico desarrollado para la materia de Móviles - 2024.
+## 📈 Roadmap de Aprendizaje
+
+### Para Principiantes
+```
+Día 1-2: Archivos 01-06 (Fundamentos)
+Día 3-4: Archivos 07-10 (I/O)
+Día 5-6: Archivos 11-13 (Condicionales)
+```
+
+### Para Intermedios
+```
+Día 1: Archivos 14-16 (Procesamiento)
+Día 2: Archivos 17-18 (Iteración)
+Día 3: Archivos 19-20 (Algoritmos)
+```
+
+---
+
+## ✅ Buenas Prácticas Implementadas
+
+- ✅ Comentarios descriptivos en código complejo
+- ✅ Nombres de variables descriptivos
+- ✅ Validación de entrada de usuario
+- ✅ Manejo de casos especiales (números negativos, cero)
+- ✅ Modularización mediante funciones
+- ✅ Uso apropiado de tipos de datos
+- ✅ Interfaz de usuario clara con mensajes informativos
+- ✅ Uso de `switch-case` para múltiples opciones
+- ✅ Separación de responsabilidades
+- ✅ Importación selectiva de librerías
+
+---
+
+## ⚠️ Áreas de Mejora Identificadas
+
+- 🔧 Manejo de excepciones (`try-catch`) para entradas inválidas
+- 📝 Documentación tipo Dartdoc en funciones
+- 🔐 Uso de constantes para valores "mágicos"
+- 🧪 Testing unitario de funciones
+- ✔️ Validación más robusta de rangos numéricos
+- 🔄 Evitar duplicación de código
+- 🎨 Formateo de números decimales en resultados
+- 🛡️ Validación de entrada numérica antes de parsear
+
+---
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas mejorar algún programa:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/MejorAlgoritmo`)
+3. Commit tus cambios (`git commit -m 'Añadir mejor algoritmo de ordenamiento'`)
+4. Push a la rama (`git push origin feature/MejorAlgoritmo`)
+5. Abre un Pull Request
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+## 👤 Autor
+
+**Hernandez Cortes Haziel Atlay**  
+ITIID 4 - Desarrollo Móvil
+
+---
+
+## 🙏 Agradecimientos
+
+- A la comunidad de Dart por la excelente documentación
+- A los profesores del curso de Desarrollo Móvil
+- A todos los que contribuyan a mejorar este material educativo
+
+---
+
+<div align="center">
+
+**⭐ Si este repositorio te fue útil, considera darle una estrella ⭐**
+
+Hecho con ❤️ para la comunidad de desarrolladores móviles
+
+</div>
