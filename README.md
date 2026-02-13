@@ -40,61 +40,8 @@ Colección completa de **21 programas en Dart** que cubren desde conceptos funda
 
 ---
 
-## 🚀 Instalación
 
-### Prerrequisitos
-
-```bash
-# Verificar instalación de Dart
-dart --version
-```
-
-Si no tienes Dart instalado, descárgalo desde [dart.dev](https://dart.dev/get-dart)
-
-### Clonar el Repositorio
-
-```bash
-git clone https://github.com/tu-usuario/PracticasMoviles.git
-cd PracticasMoviles
-```
-
----
-
-## 💻 Uso
-
-### Ejecutar un Programa
-
-```bash
-# Sintaxis general
-dart nombre_archivo.dart
-
-# Ejemplos
-dart 01_holaMundo.dart
-dart 13_menus.dart
-dart 19_7_primo.dart
-```
-
-### Ejemplos de Ejecución
-
-```bash
-# Calculadora geométrica
-$ dart 13_menus.dart
-=== Menú Principal ===
-Calcular Área (1)
-Calcular Volumen (2)
-Salir (3)
-Seleccione una opción: 1
-
-# Verificador de números primos
-$ dart 19_7_primo.dart
-Ingrese un número:
-17
-17 es un número primo.
-```
-
----
-
-## 📚 Progresión Pedagógica
+## 📚 Progresión Del Portafolio
 
 El curso está estructurado en 7 módulos progresivos:
 
@@ -323,23 +270,6 @@ Implementa algoritmo optimizado para determinar si un número es primo.
 
 ---
 
-## 📈 Roadmap de Aprendizaje
-
-### Para Principiantes
-```
-Día 1-2: Archivos 01-06 (Fundamentos)
-Día 3-4: Archivos 07-10 (I/O)
-Día 5-6: Archivos 11-13 (Condicionales)
-```
-
-### Para Intermedios
-```
-Día 1: Archivos 14-16 (Procesamiento)
-Día 2: Archivos 17-18 (Iteración)
-Día 3: Archivos 19-20 (Algoritmos)
-```
-
----
 
 ## ✅ Buenas Prácticas Implementadas
 
@@ -355,57 +285,9 @@ Día 3: Archivos 19-20 (Algoritmos)
 - ✅ Importación selectiva de librerías
 
 ---
-
-## ⚠️ Áreas de Mejora Identificadas
-
-- 🔧 Manejo de excepciones (`try-catch`) para entradas inválidas
-- 📝 Documentación tipo Dartdoc en funciones
-- 🔐 Uso de constantes para valores "mágicos"
-- 🧪 Testing unitario de funciones
-- ✔️ Validación más robusta de rangos numéricos
-- 🔄 Evitar duplicación de código
-- 🎨 Formateo de números decimales en resultados
-- 🛡️ Validación de entrada numérica antes de parsear
-
----
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Si deseas mejorar algún programa:
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/MejorAlgoritmo`)
-3. Commit tus cambios (`git commit -m 'Añadir mejor algoritmo de ordenamiento'`)
-4. Push a la rama (`git push origin feature/MejorAlgoritmo`)
-5. Abre un Pull Request
-
----
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-
----
-
 ## 👤 Autor
 
 **Hernandez Cortes Haziel Atlay**  
 ITIID 4 - Desarrollo Móvil
 
 ---
-
-## 🙏 Agradecimientos
-
-- A la comunidad de Dart por la excelente documentación
-- A los profesores del curso de Desarrollo Móvil
-- A todos los que contribuyan a mejorar este material educativo
-
----
-
-<div align="center">
-
-**⭐ Si este repositorio te fue útil, considera darle una estrella ⭐**
-
-Hecho con ❤️ para la comunidad de desarrolladores móviles
-
-</div>
