@@ -1,5 +1,6 @@
 main(){
-  /*int a = 10;
+  int a = 10;
+
   double b = 3.14;
   int? c; //variable que puede ser nula
   late int d; //variable que se inicializa despues
@@ -30,7 +31,7 @@ Hola mundo
   print(cadenaVacia);
   print(nombreCompleto);
   print(multilinea);
-*/
+
   //Boloeanos
   bool isActive = true;
   bool isNotActive = !isActive;
@@ -74,7 +75,6 @@ Hola mundo
     'poder': 'Tactico y tecnologia',
     'edad': 38
     };
- 
   Map <String, dynamic> capitanAmerica = Map();
   //capitanAmerica['nombre'] = 'Steve';
   capitanAmerica.addAll({
