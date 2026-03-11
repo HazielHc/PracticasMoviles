@@ -16,7 +16,7 @@
 
 ## 📖 Acerca del Proyecto
 
-Colección completa de **21 programas en Dart** que cubren desde conceptos fundamentales hasta algoritmos intermedios. Este repositorio sirve como material didáctico para aprender programación estructurada e imperativa en Dart, con enfoque en desarrollo móvil.
+Colección completa de **28 programas en Dart** que cubren desde conceptos fundamentales hasta estructuras de datos, manejo de errores y proyectos integradores. Este repositorio sirve como material didáctico para aprender programación estructurada e imperativa en Dart, con enfoque en desarrollo móvil.
 
 ### 🎯 Objetivos de Aprendizaje
 
@@ -28,10 +28,10 @@ Colección completa de **21 programas en Dart** que cubren desde conceptos funda
 
 ### 📊 Estadísticas
 
-- **Total de programas:** 21
-- **Líneas de código:** ~800+
-- **Conceptos cubiertos:** 30+
-- **Nivel:** Básico a Intermedio
+- **Total de programas:** 28
+- **Líneas de código:** ~1400+
+- **Conceptos cubiertos:** 45+
+- **Nivel:** Básico a Intermedio-Avanzado
 
 ---
 
@@ -61,6 +61,9 @@ El curso está estructurado en 7 módulos progresivos:
 
 7️⃣ Algoritmos (19-20)
    └─ Implementación de algoritmos clásicos
+
+8️⃣ Dart Intermedio (20c-Recursividad, #09)
+   └─ Estructuras de datos, manejo de errores y proyectos integradores
 ```
 
 ---
@@ -123,6 +126,19 @@ El curso está estructurado en 7 módulos progresivos:
 | `19_7_primo.dart` | Verificador de primos | Algoritmo de primalidad |
 | `20a_factorial.dart` | Factorial (imperativo) | Bucles descendentes |
 | `20b_factorial.dart` | Factorial (modular) | Recursión iterativa |
+
+### 🚀 Dart Intermedio
+
+| Archivo | Descripción | Conceptos Clave |
+|---------|-------------|-----------------|
+| `20c_factorial.dart` | Factorial con función dedicada | Funciones, bucles descendentes |
+| `Recursividad.dart` | Sumatoria recursiva | Recursión, caso base, llamada recursiva |
+| `22_Stacks.dart` | Implementación de pila (Stack) | List como Stack, push, pop |
+| `23_queue.dart` | Implementación de cola (Queue) | `dart:collection`, enqueue, dequeue |
+| `24_try_catch.dart` | Manejo básico de excepciones | try-catch-finally, división por cero |
+| `factorial_try_catch.dart` | Factorial con manejo de errores | try-catch, `ArgumentError`, `FormatException` |
+| `25_Examen_prueba.dart` | Sistema de tickets (Stack + Queue) | Integración Stack/Queue, menú interactivo |
+| `_09_HernandezCorteHazielAtlay.dart` | Tienda TCG (Proyecto Integrador) | POO, Stack, Queue, recursión, mapas |
 
 ---
 
@@ -907,6 +923,432 @@ void main() {
 
 ---
 
+## 🚀 Dart Intermedio
+
+<details>
+<summary><b>20c_factorial.dart</b> - Factorial con Función Dedicada</summary>
+
+### Propósito
+Cálculo de factorial con función modular y entrada de usuario
+
+### Descripción
+Versión limpia del factorial que separa la lógica matemática de la entrada/salida mediante una función `factorial()` dedicada, sin manejo de errores. Sirve como puente entre la implementación imperativa y la versión con try-catch.
+
+### Conceptos Demostrados
+- **Función `factorial()`:** Recibe `int n`, retorna `int`
+- Bucle `for` descendente (de `n` hasta `2`)
+- Separación de lógica y presentación
+- Uso del operador `!` para entrada no-nula
+
+### Algoritmo
+- Inicialización: `resultado = 1`
+- Bucle desde `n` hasta `2` (descendente)
+- Multiplicación acumulativa
+
+### Ejemplo
+```dart
+import 'dart:io';
+
+int factorial(int n) {
+  int resultado = 1;
+  for (int c = n; c > 1; c--) {
+    resultado = resultado * c;
+  }
+  return resultado;
+}
+
+void main() {
+  stdout.write('Ingrese un numero: ');
+  int n = int.parse(stdin.readLineSync()!);
+  int f = factorial(n);
+  stdout.write('El factorial de $n es $f');
+}
+```
+</details>
+
+<details>
+<summary><b>Recursividad.dart</b> - Sumatoria Recursiva</summary>
+
+### Propósito
+Introducción a la recursión mediante sumatoria de números precedentes
+
+### Descripción
+Implementa la sumatoria de todos los números desde `n` hasta `0` usando una función recursiva. Demuestra el concepto fundamental de recursión: caso base y llamada recursiva.
+
+### Conceptos Demostrados
+- **Caso base:** `if (n <= 1) return n` — detiene la recursión
+- **Llamada recursiva:** `n + sumarPrecedentes(n - 1)`
+- Validación de entrada (`int.tryParse`)
+- Manejo de números negativos
+
+### Algoritmo Recursivo
+```
+sumarPrecedentes(5)
+  = 5 + sumarPrecedentes(4)
+      = 4 + sumarPrecedentes(3)
+          = 3 + sumarPrecedentes(2)
+              = 2 + sumarPrecedentes(1)
+                  = 1  ← caso base
+```
+
+### Ejemplo
+```dart
+import 'dart:io';
+
+int sumarPrecedentes(int n) {
+  if (n <= 1) {
+    return n;
+  }
+  return n + sumarPrecedentes(n - 1);
+}
+
+void main() {
+  print('Introduce un número entero positivo:');
+  String? input = stdin.readLineSync();
+  if (input != null && int.tryParse(input) != null) {
+    int numero = int.parse(input);
+    int resultado = sumarPrecedentes(numero);
+    print('La sumatoria de los números hasta $numero es: $resultado');
+  }
+}
+```
+</details>
+
+<details>
+<summary><b>22_Stacks.dart</b> - Implementación de Pila (Stack)</summary>
+
+### Propósito
+Implementación y uso de una pila (Stack) con listas numéricas
+
+### Descripción
+Demuestra cómo simular una estructura de datos Stack usando una `List<num>` en Dart, implementando manualmente las operaciones `push` y `pop` como funciones internas al `main()`.
+
+### Conceptos Demostrados
+- **Push:** `stack.add(n)` — agrega al final (tope de la pila)
+- **Pop:** `stack.removeLast()` — elimina y retorna el último elemento
+- Principio **LIFO** (Last In, First Out)
+- Manejo de pila vacía con `StateError`
+
+### Comportamiento LIFO
+```
+push(5)  → [5]
+push(10) → [5, 10]
+push(15) → [5, 10, 15]
+pop()    → 15  (tope)
+pop()    → 10
+pop()    → 5
+```
+
+### Ejemplo
+```dart
+void main() {
+  List<num> stack = [];
+
+  void push(num n) {
+    stack.add(n);
+  }
+
+  num pop() {
+    if (stack.isEmpty) {
+      throw StateError("La pila está vacía");
+    }
+    return stack.removeLast();
+  }
+
+  push(5);
+  push(10);
+  push(15);
+  print(pop()); // 15
+  print(pop()); // 10
+  print(pop()); // 5
+}
+```
+</details>
+
+<details>
+<summary><b>23_queue.dart</b> - Implementación de Cola (Queue)</summary>
+
+### Propósito
+Implementación y uso de una cola (Queue) con la librería dart:collection
+
+### Descripción
+Implementa la estructura de datos Queue usando `dart:collection`, con funciones `enqueue` y `dequeue` para gestionar elementos en orden de llegada.
+
+### Conceptos Demostrados
+- **Importación:** `dart:collection`
+- **Enqueue:** `queue.addLast(element)` — agrega al final
+- **Dequeue:** `queue.removeFirst()` — elimina el primero
+- Principio **FIFO** (First In, First Out)
+- Manejo de cola vacía con `StateError`
+
+### Comportamiento FIFO
+```
+enqueue("Primero")  → [Primero]
+enqueue("Segundo")  → [Primero, Segundo]
+enqueue("Tercero")  → [Primero, Segundo, Tercero]
+dequeue() → "Primero"  (frente)
+dequeue() → "Segundo"
+dequeue() → "Tercero"
+```
+
+### Ejemplo
+```dart
+import 'dart:collection';
+
+void main() {
+  Queue<String> queue = Queue();
+
+  void enqueue(String element) {
+    queue.addLast(element);
+  }
+
+  String dequeue() {
+    if (queue.isEmpty) {
+      throw StateError("La cola está vacía");
+    }
+    return queue.removeFirst();
+  }
+
+  enqueue("Primer elemento");
+  enqueue("Segundo elemento");
+  print(dequeue()); // "Primer elemento"
+  print(dequeue()); // "Segundo elemento"
+}
+```
+</details>
+
+<details>
+<summary><b>24_try_catch.dart</b> - Manejo Básico de Excepciones</summary>
+
+### Propósito
+Introducción al manejo de excepciones con try-catch-finally
+
+### Descripción
+Programa introductorio que demuestra el manejo de errores en Dart mediante `try-catch-finally`, usando la división por cero como caso de ejemplo.
+
+### Bloques Utilizados
+- **`try`:** Contiene el código que puede fallar
+- **`catch (e)`:** Captura cualquier excepción y la muestra
+- **`finally`:** Se ejecuta siempre, haya error o no
+
+### Flujo de Ejecución
+```
+try { 10 ~/ 0 } → lanza IntegerDivisionByZeroException
+catch (e)       → imprime el error
+finally         → se ejecuta siempre
+```
+
+### Ejemplo
+```dart
+void main() {
+  try {
+    int result = 10 ~/ 0;
+    print(result);
+  } catch (e) {
+    print("Ocurrió un error: $e");
+  } finally {
+    print("Este bloque se ejecuta siempre, haya ocurrido un error o no.");
+  }
+}
+```
+</details>
+
+<details>
+<summary><b>factorial_try_catch.dart</b> - Factorial con Manejo de Errores</summary>
+
+### Propósito
+Factorial robusto con manejo completo de excepciones
+
+### Descripción
+Versión mejorada del factorial que incorpora manejo de errores completo, capturando tanto errores de formato (entrada no numérica) como errores lógicos (números negativos).
+
+### Tipos de Excepciones Manejadas
+- **`FormatException`:** El usuario ingresó texto en lugar de número
+- **`ArgumentError`:** El número ingresado es negativo
+- **`catch (e)`:** Cualquier otro error inesperado
+- **`finally`:** Bloque de limpieza con `Future.delayed`
+
+### Características Avanzadas
+- Uso de `async/await` en `main()`
+- `throw ArgumentError(...)` para errores personalizados
+- `Future.delayed(Duration(seconds: 3))` para espera asíncrona
+- Separación de errores por tipo con `on`
+
+### Ejemplo
+```dart
+import 'dart:io';
+
+int factorial(int n) {
+  if (n < 0) {
+    throw ArgumentError('El numero no puede ser negativo');
+  }
+  int resultado = 1;
+  for (int c = n; c > 1; c--) {
+    resultado = resultado * c;
+  }
+  return resultado;
+}
+
+void main() async {
+  try {
+    stdout.write('Ingrese un numero: ');
+    int n = int.parse(stdin.readLineSync()!);
+    print('El factorial de $n es ${factorial(n)}');
+  } on FormatException {
+    print('Error: Tienes que ingresar un numero valido, no texto');
+  } on ArgumentError catch (e) {
+    print('Error de logica: ${e.message}');
+  } catch (e) {
+    print('Ocurrio un error inesperado: $e');
+  } finally {
+    await Future.delayed(Duration(seconds: 3));
+    print('Chaow');
+  }
+}
+```
+</details>
+
+<details>
+<summary><b>25_Examen_prueba.dart</b> - Sistema de Tickets (Stack + Queue)</summary>
+
+### Propósito
+Sistema integrador de tickets usando Stack y Queue simultáneamente
+
+### Descripción
+Aplicación de consola que simula un sistema de atención de tickets técnicos, usando una cola (`List<String>`) para gestionar tickets pendientes y una pila (`List<String>`) para registrar y deshacer acciones del técnico.
+
+### Arquitectura del Sistema
+```
+Sistema de Tickets
+├── Cola (queue) → tickets pendientes (FIFO)
+│   ├── Agregar ticket (enqueue)
+│   └── Atender ticket (dequeue)
+└── Pila (stack) → acciones del técnico (LIFO)
+    ├── Registrar acción (push)
+    └── Deshacer acción (pop)
+```
+
+### Funciones Implementadas
+- **`agregarTicket()`:** Valida entrada con hasta 3 intentos, hace enqueue
+- **`atenderTicket()`:** Hace dequeue del primer ticket
+- **`registrarAccion()`:** Push de una acción a la pila
+- **`deshacerAccion()`:** Pop de la última acción registrada
+- **`mostrarEstado()`:** Visualiza cola y pila actuales
+
+### Validación de Entrada
+- Hasta 3 intentos para ingresar un ID de ticket válido
+- Uso de `int.tryParse()` para entrada segura
+
+### Ejemplo
+```dart
+import 'dart:io';
+
+List<String> cola = [];
+List<String> pila = [];
+
+void atenderTicket() {
+  if (cola.isEmpty) {
+    print("⚠️  No hay tickets pendientes.");
+  } else {
+    String atendido = cola.removeAt(0); // dequeue
+    print("🎯 Atendiendo: $atendido");
+  }
+}
+
+void deshacerAccion() {
+  if (pila.isEmpty) {
+    print("⚠️  No hay acciones para deshacer.");
+  } else {
+    String deshecha = pila.removeLast(); // pop
+    print("↩️  Se deshizo: $deshecha");
+  }
+}
+```
+</details>
+
+<details>
+<summary><b>_09_HernandezCorteHazielAtlay.dart</b> - Tienda TCG (Proyecto Integrador)</summary>
+
+### Propósito
+Proyecto integrador: Sistema de punto de venta para tienda de cartas coleccionables
+
+### Descripción
+Aplicación completa de consola que simula el sistema de ventas de una tienda de cartas TCG (Trading Card Game), integrando POO, estructuras de datos (Stack y Queue), recursión y lógica de negocio avanzada.
+
+### Arquitectura del Sistema
+```
+Tienda TCG
+├── Clases
+│   ├── Carta      → código, nombre, set, precio, stock
+│   ├── ItemCarrito → carta + cantidad
+│   ├── Cliente    → id, nombre, carrito
+│   └── StackSimple<T> → pila genérica reutilizable
+├── Cola (Queue<Cliente>) → clientes en espera (FIFO)
+├── Pila (StackSimple)   → historial para deshacer (LIFO)
+└── Función recursiva    → cálculo de total del carrito
+```
+
+### Clases Implementadas
+
+**`Carta`**
+- Atributos: `codigo`, `nombre`, `set`, `precio`, `stock`
+- Representa un producto del inventario
+
+**`ItemCarrito`**
+- Atributos: `carta`, `cantidad`
+- Agrupa carta y cantidad comprada
+
+**`Cliente`**
+- Atributos: `id`, `nombre`, `carrito`
+- Gestiona el carrito de compras de cada cliente
+
+**`StackSimple<T>`**
+- Implementación genérica de pila
+- Métodos: `push()`, `pop()`, getter `vacio`
+
+### Funcionalidades del Sistema
+
+| Opción | Función |
+|--------|---------|
+| 1 | Registrar nuevo cliente en la cola |
+| 2 | Ver el siguiente cliente en cola |
+| 3 | Atender al siguiente cliente |
+| 4 | Agregar carta al carrito del cliente activo |
+| 5 | Deshacer última compra (pop de la pila) |
+| 6 | Cerrar venta y generar ticket con descuentos |
+| 7 | Ver inventario completo |
+| 8 | Salir |
+
+### Función Recursiva
+```dart
+double calcularTotalRecursivo(List<ItemCarrito> items, int i) {
+  if (i >= items.length) return 0;
+  return (items[i].carta.precio * items[i].cantidad)
+       + calcularTotalRecursivo(items, i + 1);
+}
+```
+
+### Lógica de Descuentos por Set
+- **3-5 cartas del mismo set:** 10% de descuento
+- **6-8 cartas del mismo set:** 15% de descuento
+- **9+ cartas del mismo set:** 20% de descuento
+
+### Librerías Utilizadas
+- `dart:collection` — Queue para la cola de clientes
+- `dart:io` — Entrada/salida en consola
+
+### Características Destacadas
+- ✅ Programación Orientada a Objetos (clases, constructores)
+- ✅ Genéricos (`StackSimple<T>`)
+- ✅ Función recursiva obligatoria para cálculo de totales
+- ✅ Integración simultánea de Stack y Queue
+- ✅ Validación de stock antes de agregar al carrito
+- ✅ Actualización de inventario al cerrar venta
+- ✅ Generación de ticket detallado con descuentos por set
+</details>
+
+---
+
 ## 🛠️ Conceptos Técnicos Cubiertos
 
 ### Fundamentos
@@ -925,22 +1367,34 @@ void main() {
 - ✅ Listas (Arrays)
 - ✅ Sets (conjuntos)
 - ✅ Maps (diccionarios)
+- ✅ Pilas / Stack (LIFO)
+- ✅ Colas / Queue (FIFO) — `dart:collection`
 
-### Programación Modular
+### Programación Modular y OOP
 - ✅ Funciones con y sin retorno
 - ✅ Paso de parámetros
 - ✅ Refactorización de código
+- ✅ Clases y constructores
+- ✅ Genéricos (`<T>`)
 - ✅ Aplicaciones multinivel
+
+### Manejo de Errores
+- ✅ Bloques `try-catch-finally`
+- ✅ Excepciones específicas (`FormatException`, `ArgumentError`, `StateError`)
+- ✅ Lanzamiento de errores con `throw`
+- ✅ Programación asíncrona básica (`async/await`, `Future.delayed`)
 
 ### Algoritmos Implementados
 - 🔢 Comparación de números
 - 📊 Ordenamiento (Bubble Sort)
 - ➕ Suma de dígitos
 - 🔍 Verificación de números primos
-- 🧮 Cálculo de factorial
+- 🧮 Cálculo de factorial (iterativo, modular y con manejo de errores)
 - 📐 Geometría (áreas y volúmenes)
 - 🔄 Conversión de sistemas de calificación
 - ✖️ Generación de tablas de multiplicar
+- 🔁 Sumatoria recursiva
+- 🛒 Sistema de punto de venta con descuentos
 
 ---
 
@@ -957,5 +1411,10 @@ void main() {
 - ✅ Uso de `switch-case` para múltiples opciones
 - ✅ Separación de responsabilidades
 - ✅ Importación selectiva de librerías
+- ✅ Manejo de excepciones por tipo con bloques `on`
+- ✅ Uso de genéricos para estructuras reutilizables
+- ✅ Programación orientada a objetos con clases bien definidas
+- ✅ Recursión con caso base explícito
 
 ---
+
