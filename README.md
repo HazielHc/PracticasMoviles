@@ -70,7 +70,7 @@ El curso está estructurado en 7 módulos progresivos:
 
 ## 📑 Índice de Programas
 
-### 🎓 Fundamentos Básicos
+###  Fundamentos Básicos Unidad 1
 
 | Archivo | Descripción | Conceptos Clave |
 |---------|-------------|-----------------|
@@ -119,7 +119,7 @@ El curso está estructurado en 7 módulos progresivos:
 | `18a_funcions.dart` | Tablas de multiplicar (imperativo) | for loops |
 | `18b_funcions.dart` | Tablas de multiplicar (modular) | Funciones, refactorización |
 
-### 🧮 Algoritmos Matemáticos
+###  Algoritmos Matemáticos
 
 | Archivo | Descripción | Conceptos Clave |
 |---------|-------------|-----------------|
@@ -127,7 +127,7 @@ El curso está estructurado en 7 módulos progresivos:
 | `20a_factorial.dart` | Factorial (imperativo) | Bucles descendentes |
 | `20b_factorial.dart` | Factorial (modular) | Recursión iterativa |
 
-### 🚀 Dart Intermedio
+###  Dart Intermedio Unidad 2
 
 | Archivo | Descripción | Conceptos Clave |
 |---------|-------------|-----------------|
@@ -142,7 +142,7 @@ El curso está estructurado en 7 módulos progresivos:
 
 ---
 
-## 🔍 Contenido Detallado
+## 🔍 Contenido Detallado Unidad 1
 
 <details>
 <summary><b>01_holaMundo.dart</b> - Programa Básico Introductorio</summary>
@@ -923,7 +923,7 @@ void main() {
 
 ---
 
-## 🚀 Dart Intermedio
+##  Dart Intermedio Unidad 2
 
 <details>
 <summary><b>20c_factorial.dart</b> - Factorial con Función Dedicada</summary>
